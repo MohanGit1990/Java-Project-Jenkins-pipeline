@@ -183,7 +183,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/mohangit1990/Java-project.git'
+                git 'https://github.com/MohanGit1990/Java-Project-Jenkins-pipeline.git'
             }
         }
         stage('Maven Build') {
