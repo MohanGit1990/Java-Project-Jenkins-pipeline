@@ -156,7 +156,7 @@ kubectl version --short --client
 3) Execute below commands in Jenkins Server and paste kube config file for ubuntu user to check EKS Cluster info<br/>
 
 ```
- aws eks update-kubeconfig --region ap-south-1 --name <your-eks-cluster-name>
+ aws eks update-kubeconfig --region us-west-2 --name mohan-cluster
 ```
 
 4) check eks nodes <br/>
