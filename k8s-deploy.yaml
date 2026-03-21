@@ -2,23 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: mavenwebappdeployment
+ name: mavenproject
 spec:
  replicas: 2
  strategy: 
     type: Recreate
  selector: 
    matchLabels: 
-     app: mavenwebapp
+     app: mavenproject
  template:
   metadata:
-   name: mavenwebapppod
+   name: mavenproject
    labels:
-     app: mavenwebapp	 
+     app: mavenproject	 
   spec: 
     containers:
-    - name: mavenwebappcontainer
-      image: mohan/maven-web-app:latest
+    - name: mavenprojectcontainer
+      image: maven-app:latest
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
@@ -30,7 +30,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-   app: mavenwebapp
+   app: mavenproject
   ports:
    - port: 80
      targetPort: 8080
