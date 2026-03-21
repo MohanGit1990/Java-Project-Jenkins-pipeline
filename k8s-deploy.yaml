@@ -18,7 +18,7 @@ spec:
   spec: 
     containers:
     - name: mavenprojectcontainer
-      image: mohankumar1990/maven/maven-app:latest
+      image: mohankumar1990/maven:latest
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
